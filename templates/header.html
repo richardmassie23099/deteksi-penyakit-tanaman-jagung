@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Deteksi Gejala dan Penyakit Tanaman Jagung</title>
+        <!-- CSS -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/js-image-slider.css')}}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/lightbox.min.css')}}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/info.css')}}">
+        <link rel="shortcut icon" type="text/css" href="{{ url_for('static', filename='images/logo.png')}}">
+        <!-- Javascript -->
+        <script src="{{ url_for('static', filename='js/js-image-slider.js')}}"></script>
+        <script src="{{ url_for('static', filename='js/lightbox-plus-jquery.min.js')}}"></script>
+    </head>
+
+        <div id="wrapper"><hr>
+            <div id="header">
+                <!--Start Header-->
+                    <div class="container">
+                        <div id="header_left">
+                            <!-- Start Header Left-->
+                            <a href="{{ url_for('home') }}" title="Ke Halaman Utama" id="home">
+                                <input type="image" src="{{ url_for('static', filename='images/logobalitsereal.svg')}}" height="70px">
+                            </a>    
+                            <!-- End Header Left-->
+                        </div>
+                        <div id="header_right">
+                            <!-- Start Header Right-->
+                                <ul>
+                                    <li><a href="{{ url_for('deteksi') }}" id="deteksi">Mulai Deteksi</a></li>
+                                    <li><a href="{{ url_for('penanganan') }}" id="penanganan">Penanganan Penyakit</a></li>
+                                    <li><a href="{{ url_for('info') }}" id="info">Informasi BALITSEREAL</a></li>
+                                </ul>
+                            <!-- End Header Right-->
+                        </div>    
+                    </div>
+                <!--End Header-->
+            </div>

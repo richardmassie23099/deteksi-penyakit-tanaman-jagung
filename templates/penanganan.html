@@ -1,0 +1,58 @@
+{% include "header.html" %}
+
+  <style>
+
+        body {
+            background-repeat: no-repeat;
+            background-image: url("../static/images/back2.png");
+            background-size: 100%;
+            color: white;
+        }
+
+        .img_box { width:100%;}
+        .img_box li { float:left; overflow:hidden; margin:10px; height:200px; width:290px; border-radius:11px; border:2px solid white;}
+        .img_box li img { height:200px; width:290px; border-radius:10px;}
+      
+        /*#wrapper #content {
+            background-image: url(../static/images/back2.jpg);
+            color: white;
+        }*/
+
+  </style>
+
+       <div id="content">
+         <!-- Start Content -->
+           <div class="container">
+             <ul class="img_box">
+                    	<li>
+                        	<a href="../static/images/images gallery/bulai_daun.png" data-lightbox="dexample-set" 
+                          data-title="Bulai Daun">
+                            <img src="../static/images/images gallery/bulai_daun.jpg">
+                            </a>
+                        </li>
+                         <li>
+                        	<a href="../static/images/images gallery/gejala_hawar_daun.png" data-lightbox="dexample-set" 
+                          data-title="Gejala Hawar Daun">
+                        	<img src="../static/images/images gallery/gejala_hawar_daun.jpg">
+                            </a>
+                        </li>
+                         <li>
+                        	<a href="../static/images/images gallery/gejala_bercak_daun.png" data-lightbox="dexample-set" 
+                          data-title="Gejala Bercak Daun">
+                        	<img src="../static/images/images gallery/gejala_bercak_daun.jpg">
+                            </a>
+                        </li>
+                         <li>
+                        	<a href="../static/images/images gallery/hawar_daun_komplikasi.png" data-lightbox="dexample-set" 
+                          data-title="Hawar Daun Komplikasi">
+                        	<img src="../static/images/images gallery/hawar_daun_komplikasi.jpg">
+                            </a>
+                        </li>
+                                          
+                       
+                    </ul> 
+           </div>
+         <!-- End Content -->
+       </div>
+
+{% include "footer.html" %}

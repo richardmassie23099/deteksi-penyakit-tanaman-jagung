@@ -1,0 +1,158 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Deteksi Gejala dan Penyakit Tanaman Jagung</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css"
+        integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
+    <link rel="shortcut icon" type="text/css" href="../static/images/logo.png">
+
+<style>
+        body {
+            background-repeat: no-repeat;
+            background-image: url("../static/images/back2.png");
+            background-size: 100%;
+        }
+
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        form {
+            display: flex;
+            height: 85vh;
+            justify-content: center;
+            align-items: center;
+            margin-top: -150px;
+            width: 50%;
+            text-align: center;
+			margin-left:300px;  
+        }
+
+        .details h2 {
+            
+            position: center;
+            top: 100px;
+            margin: auto;
+            color: #fdcc0b;
+            font-size: 30px;
+        }
+
+        h1 {
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+            text-align: center;
+            font-family: arial, helvetica, sans-serif;
+        }
+
+        label:hover {
+            transform: scale(1.03);
+        }
+
+        .upload {
+            font-size: 15px;
+            font-family: arial, helvetica, sans-serif;
+            background-color: white;
+            border-radius: 20px;
+            outline: none;
+            width: 500px;
+            color: black;
+            border: 2px solid white;
+        }
+
+        ::-webkit-file-upload-button {
+            text-transform: uppercase;
+            font-weight: 600;
+            font-family: arial, helvetica, sans-serif;
+            font-size: 15px;
+            color: white;
+            padding: 20px;
+            border: 2px solid rgb(201, 6, 6);
+            background-color: rgb(201, 6, 6);
+            border-radius: 15px;
+        }
+
+        ::-webkit-file-upload-button:hover {
+            border-radius: 20px;
+            border: 2px solid darkgray;
+        }
+
+        input[type="submit"] {
+            font-weight: 600;
+            font-family: arial, helvetica, sans-serif;
+            font-size: 15px;
+            color: white;
+            position: absolute;
+            margin-top: 200px;
+            border-radius: 15px;
+            padding: 15px 35px;
+            background-color: #fdcc0b;
+            border: 2px solid white;
+        }
+
+        nav a:hover {
+            color:#fdcc0b;
+        }
+
+        nav a {
+            font-size: 15px;
+            font-family: arial, helvetica, sans-serif;
+            font-weight: 600;
+            /*font-style: bold;*/
+            color:#ffffff;
+            display: block;
+            text-decoration: none;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        .container {
+            overflow: hidden;
+            min-height: 50px;
+            margin: auto;
+        }
+
+</style>
+</head>
+    
+<body background="../images/back.jpg">
+
+    <nav class="navbar navbar-expand-lg fixed-top" style="background-color: #3a7000;">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="{{ url_for('home') }}">HOME<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('penanganan') }}">PENANGANAN PENYAKIT</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{{ url_for('info') }}">INFORMASI BALITSEREAL</a>
+                </li>
+              </ul>
+            </div>
+        </div>    
+    </nav>
+
+    <br><br><br>
+
+    <h1>DETEKSI GEJALA & PENYAKIT JAGUNG DISINI</h1>
+
+    <section>
+             
+        <form action="/predict" method="post" enctype="multipart/form-data" onsubmit="showloading()">
+            <input type="file" name="image" class="upload">
+            <input type="submit" value="SUBMIT">
+        </form>   
+
+    </section>
+    
+</body>
+</html>   

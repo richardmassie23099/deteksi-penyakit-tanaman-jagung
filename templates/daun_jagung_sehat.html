@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daun Jagung Sehat</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css"
+        integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
+    <link rel="shortcut icon" type="text/css" href="{{ url_for('static', filename= 'images/logo.png')}}">
+
+    <style>
+
+        body {
+            background-repeat: no-repeat;
+            background-image: url("../static/images/back3.jpg");
+            background-size: 100%;
+        }
+
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        .border img {
+            border-radius: 10px;
+            border: 2px solid white;
+        }
+		
+        nav a:hover {
+            color:#fdcc0b;
+        }
+
+        nav a {
+            font-size: 15px;
+            font-family: arial, helvetica, sans-serif;
+            font-weight: 600;
+            font-style: bold;
+            color:#ffffff;
+            display: block;
+            text-decoration: none;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg fixed-top" style="background-color: #3a7000;">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="{{ url_for('home') }}">Home<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{{ url_for('deteksi') }}">Deteksi Penyakit</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{{ url_for('penanganan') }}">Penanganan Penyakit</a>
+                </li>
+              </ul>
+            </div>
+        </div>    
+    </nav>
+
+    <br><br><br><br>
+
+    <div class="container my-2">
+        <div class="row mb-5">
+
+            <div class="col-sm" style="margin-bottom: 23px;">
+                <span class="border border-primary">
+                    <img src="{{url_for('static', filename= 'images/daun_sehat.jpeg')}}" alt="User Image" style="width:500px;height:500px;">
+                </span>
+            </div>
+
+            <div class="col-sm">
+
+                <div>
+                    <h1 style="padding: 10px; background-color: #3a7000; color: white;"
+                        class="text-center mb-5 content-h1 rounded">
+                        {{pred_output}} </h1>
+                </div>
+                <div class="details">					
+					<h4 style="text-align:center; color: white;"><b>Daun jagung dalam keadaan sehat.</b></h4>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</body>
+
+</html>
