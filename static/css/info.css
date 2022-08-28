@@ -1,0 +1,38 @@
+@charset "utf-8";
+/* CSS Document */
+
+#wrapper #content {
+	background-image: 'url(../static/images/back.jpg)';
+	color: white;
+}
+
+#wrapper #content #contact_left {
+	width: 550px;
+	float: left;
+	min-height: 500px;
+}
+
+#wrapper #content #contact_right {
+	width: 380px;
+	float: right;
+	min-height: 500px;
+}
+
+.thetitle {
+  font-size: 25px;	
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+#form_contact input[type="text"], input[type="password"], input[type="email"] {
+	width: 300px;
+}
+
+#form_contact textarea {
+	width: 300px;
+	height: 200px;
+}
+
+#form_contact input[type="submit"], input[type="reset"] {
+	padding: 5px;
+}

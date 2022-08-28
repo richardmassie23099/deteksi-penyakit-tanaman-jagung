@@ -1,0 +1,76 @@
+@charset "utf-8";
+/* CSS Document */
+* {
+  margin: 0px;
+  padding: 0px;
+  font-size: 14px;
+  font-family: arial, helvetica, sans-serif;
+}
+
+#wrapper {
+    width: 100%;
+    min: height 600px;
+}
+
+#wrapper #header {
+    height: 70px;
+    background-color: #3a7000;
+}
+
+#wrapper #header #header_left {
+    height: 110px;
+    width: 288px;
+    paddding-top: 20px;
+    margin-bottom: 20px;
+    float: left;
+}
+
+#wrapper #header #header_right {
+    height: 150px;
+    width: 400px;
+    padding-top: 15px;
+    float: right;
+}
+
+#wrapper #header #header_right ul {
+    list-style-type: none;
+}
+
+#wrapper #header #header_right ul li {
+    float: left;
+    width: 130px;
+}
+
+#wrapper #header #header_right a {
+    font-size: 15px;
+    color:#ffffff;
+    text-transform: uppercase;
+    font-weight: 600;
+    /*font-style: bold;*/
+    text-decoration: none;
+    display: block;
+    height: 70px;
+    text-align: center;
+    font-family: arial, helvetica, sans-serif;
+}
+
+#wrapper #header #header_right a:hover {
+    color: #fdcc0b;
+}
+
+#wrapper #footer {
+  /*background-color: #3a7000;*/  
+    height: 50px;
+    color: #ffffff;
+    line-height: 50px;
+    text-align: center;
+    /*font-style: bold;*/
+    font-family: arial, helvetica, sans-serif;
+}
+
+.container {
+    width: 950px;
+    overflow: hidden;
+    min-height: 50px;
+    margin: auto;
+}

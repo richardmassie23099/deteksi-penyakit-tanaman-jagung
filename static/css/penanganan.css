@@ -1,0 +1,8 @@
+.img_box { width:100%;}
+.img_box li { float:left; overflow:hidden; margin:10px; height:230px; width:290px;}
+.img_box li img { height:200px; border-radius:10px;}
+
+#wrapper #content {
+    background-image: url(../static/images/back.jpg);
+    color: white;
+}
